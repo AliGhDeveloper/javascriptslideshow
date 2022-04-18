@@ -1,0 +1,85 @@
+.slide{
+    position: relative;
+    display: none;
+}
+
+.slide.active{
+    display: block;
+}
+
+.slides{
+    position:relative;
+    cursor: pointer;
+}
+
+img{
+    width: 100%;
+}
+.slide div{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(239, 45, 100, 0.526);
+    width: 100%;
+    min-height: 44px;
+    transition: min-height 0.5s;
+}
+
+.slide div:hover{
+    min-height: 100%;
+
+}
+
+.slide div > p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    transition: font-size 0.5s;
+}
+
+.slide div:hover > p {
+    font-size: 3rem;
+}
+
+.next, .prev{
+    position:absolute;
+    background-color:rgba(37, 34, 34, 0.641);
+    bottom: 50%;
+    color: #fff;
+    padding: 16px;
+    margin-bottom: -32px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.next:active, .prev:active{
+    background-color:rgba(37, 34, 34, 0.395)
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev{
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.buttons span{
+    display:inline-block;
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color:rgba(59, 56, 56, 0.753);
+}
+
+.buttons span.active{
+    background-color:rgba(59, 56, 56, 0.933);
+}
+
+.buttons {
+    user-select: none;
+}
